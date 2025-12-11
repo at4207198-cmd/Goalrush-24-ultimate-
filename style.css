@@ -1,0 +1,40 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background: #0b3b0b;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* Écrans accueil et sélection */
+#startScreen, #teamSelect, #difficultySelect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+#startScreen h1 { font-size: 60px; margin-bottom: 30px; animation: pulse 1.2s infinite; }
+@keyframes pulse { 0%{transform:scale(1);} 50%{transform:scale(1.1);} 100%{transform:scale(1);} }
+#startScreen button, #teamSelect button, #difficultySelect button { padding:15px 30px; font-size:24px; border-radius:10px; cursor:pointer; font-weight:bold; }
+
+/* Menu équipe */
+#teamButtons { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:15px; }
+.teamBtn { padding:10px 15px; border-radius:8px; cursor:pointer; color:white; font-weight:bold; }
+
+/* Jeu */
+#gameWrap { position: relative; width:100%; height:100vh; display:flex; justify-content:center; align-items:center; }
+canvas { background: linear-gradient(#117a1a,#0c5a10); border:4px solid #fff; }
+#ui { position:absolute; top:10px; left:50%; transform:translateX(-50%); color:white; font-weight:bold; font-size:20px; z-index:10; }
+#controls { position:absolute; bottom:12px; left:50%; transform:translateX(-50%); display:flex; gap:8px; z-index:10; }
+.btn { background: rgba(0,0,0,0.5); color:white; padding:8px 12px; border-radius:8px; font-weight:bold; cursor:pointer; user-select:none; }
+
+/* Stats */
+#stats { position:absolute; top:50px; right:20px; color:white; background:rgba(0,0,0,0.5); padding:10px; border-radius:8px; font-size:16px; z-index:10; }
+
+/* Menu upgrade joueur */
+#upgradeMenu { display:none; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    background:rgba(0,0,0,0.8); padding:20px; color:white; border-radius:10px; text-align:center; z-index:100; }
+#upgradeMenu button { padding:10px 15px; margin:5px; font-size:16px; cursor:pointer; }
