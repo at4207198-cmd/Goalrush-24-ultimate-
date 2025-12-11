@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoalRush 24 Ultimate</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Écran accueil -->
+<div id="startScreen">
+    <h1 id="gameTitle">GoalRush 24 Ultimate</h1>
+    <button id="startBtn">Jouer</button>
+</div>
+
+<!-- Sélection équipe -->
+<div id="teamSelect" style="display:none;">
+    <h2>Choisis ton équipe</h2>
+    <div id="teamButtons"></div>
+</div>
+
+<!-- Sélection difficulté -->
+<div id="difficultySelect" style="display:none;">
+    <h2>Choisis la difficulté</h2>
+    <button class="diffBtn" data-level="easy">Facile</button>
+    <button class="diffBtn" data-level="medium">Moyen</button>
+    <button class="diffBtn" data-level="hard">Difficile</button>
+</div>
+
+<!-- Jeu -->
+<div id="gameWrap" style="display:none;">
+    <canvas id="gameCanvas" width="1200" height="700"></canvas>
+    <div id="ui">
+        <div id="score">0 - 0</div>
+        <div id="timer">00:00</div>
+    </div>
+    <div id="controls">
+        <div class="btn" id="passBtn">A : Passe</div>
+        <div class="btn" id="lobBtn">A+D : Lob</div>
+        <div class="btn" id="deepPassBtn">C : Passe Profonde</div>
+        <div class="btn" id="crossBtn">D : Centre</div>
+    </div>
+    <div id="stats">
+        <div id="possession">Possession: 50% - 50%</div>
+        <div id="shots">Tirs: 0 - 0</div>
+        <div id="passes">Passes: 0 - 0</div>
+        <div id="playerXP">XP: 0</div>
+    </div>
+</div>
+
+<!-- Menu amélioration joueur -->
+<div id="upgradeMenu">
+    <h2>Améliore ton joueur !</h2>
+    <button onclick="upgrade('speed')">Vitesse</button>
+    <button onclick="upgrade('passPrecision')">Précision de passe</button>
+    <button onclick="upgrade('shootPower')">Puissance de tir</button>
+    <button onclick="upgrade('endurance')">Endurance</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
